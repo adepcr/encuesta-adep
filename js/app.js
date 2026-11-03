@@ -790,7 +790,7 @@
       $("#am-titulo").textContent = "¿Quiere responder hablando?";
       $("#am-texto").innerHTML =
         "<p>En algunas preguntas puede hablar en vez de escribir. Para eso, su equipo le preguntará <b>una sola vez</b> si permite usar el micrófono. Toque <b>«Permitir»</b>.</p>" +
-        '<div class="am-ejemplo" aria-hidden="true"><p><i class="fa-solid fa-microphone"></i> adep-encuesta.web.app quiere usar su micrófono</p>' +
+        '<div class="am-ejemplo" aria-hidden="true"><p><i class="fa-solid fa-microphone"></i> ' + (location.hostname || 'Esta página') + ' quiere usar su micrófono</p>' +
         '<div class="am-op"><span>Bloquear</span><span class="am-permitir">Permitir</span></div></div>' +
         "<p>Su teléfono convierte su voz en texto. ADEP no guarda su voz.</p>";
       $("#am-si").innerHTML = '<i class="fa-solid fa-microphone"></i> Sí, permitir el micrófono';
@@ -798,7 +798,7 @@
       $("#am-titulo").textContent = "Para dictar, su equipo le pedirá permiso";
       $("#am-texto").innerHTML =
         "<p>Al continuar, aparecerá un mensaje preguntando si permite usar el micrófono. Toque <b>«Permitir»</b>.</p>" +
-        '<div class="am-ejemplo" aria-hidden="true"><p><i class="fa-solid fa-microphone"></i> adep-encuesta.web.app quiere usar su micrófono</p>' +
+        '<div class="am-ejemplo" aria-hidden="true"><p><i class="fa-solid fa-microphone"></i> ' + (location.hostname || 'Esta página') + ' quiere usar su micrófono</p>' +
         '<div class="am-op"><span>Bloquear</span><span class="am-permitir">Permitir</span></div></div>' +
         "<p>Su teléfono convierte su voz en texto. ADEP no guarda su voz.</p>";
       $("#am-si").innerHTML = '<i class="fa-solid fa-microphone"></i> Continuar';

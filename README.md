@@ -3,9 +3,9 @@
 Sitio web de la **Encuesta de servicio a la persona asociada** de la Asociación de Educadores Pensionados (ADEP).
 Es un sitio estático (HTML, CSS y JavaScript, sin dependencias) listo para abrir en Visual Studio Code y publicar en GitHub Pages.
 
-- **Encuesta:** https://adep-encuesta.web.app · **Resultados:** https://adep-encuesta.web.app/resultados
+- **Encuesta:** https://adepcr.github.io/encuesta-adep/ · **Resultados:** https://adepcr.github.io/encuesta-adep/resultados.html
 - **Repositorio oficial:** https://github.com/adepcr/encuesta-adep (organización de ADEP)
-- Se publica sola en Firebase con cada cambio en `main` (ver [PUBLICAR.md](PUBLICAR.md)).
+- Se publica sola con GitHub Pages en cada cambio en `main` (ver [PUBLICAR.md](PUBLICAR.md)).
 
 ## Características
 
@@ -99,8 +99,8 @@ desde la encuesta; compártala solo con quien deba verla.
 
 ## Dónde está publicada
 
-- Encuesta: **https://adep-encuesta.web.app**
-- Resultados (solo organizadores, con clave): **https://adep-encuesta.web.app/resultados**
+- Encuesta: **https://adepcr.github.io/encuesta-adep/**
+- Resultados (solo organizadores, con clave): **https://adepcr.github.io/encuesta-adep/resultados.html**
 
-Cada cambio que se sube a `main` se publica solo en Firebase Hosting (proyecto `adep-encuesta`, de la
-cuenta de Gmail de ADEP). Vea **[PUBLICAR.md](PUBLICAR.md)**.
+Cada cambio que se sube a `main` se publica solo con GitHub Pages. Vea **[PUBLICAR.md](PUBLICAR.md)**.
+La dirección anterior, `adep-encuesta.web.app` (Firebase), sigue funcionando con la última versión publicada ahí.

@@ -1,59 +1,28 @@
-# Publicar la encuesta en Firebase (dirección adep-encuesta.web.app)
+# Publicar la encuesta (GitHub Pages)
 
-> ✅ Configurado el 22/10/2026 con la cuenta de Gmail de ADEP. Esta guía queda como referencia.
->
-> 📦 Desde noviembre de 2026 el repositorio oficial es **https://github.com/adepcr/encuesta-adep** (organización de ADEP).
-> La llave `FIREBASE_SERVICE_ACCOUNT` se generó de nuevo para este repositorio (pasos 3 y 5).
+La encuesta se publica con **GitHub Pages**, desde este repositorio de la organización de ADEP.
+No necesita llaves, contraseñas ni Firebase.
 
-Cada vez que se sube un cambio a `main`, GitHub publica la encuesta en **https://adep-encuesta.web.app**
-(y la página de resultados en **https://adep-encuesta.web.app/resultados**).
+- Encuesta: **https://adepcr.github.io/encuesta-adep/**
+- Resultados (solo organizadores, con clave): **https://adepcr.github.io/encuesta-adep/resultados.html**
 
-Se configura **una sola vez**, con la **cuenta de Gmail de ADEP** (no con una cuenta personal).
+Las respuestas no dependen de la página: siguen llegando a la hoja de Google de la cuenta de Gmail de ADEP
+(vea [INSTALAR-BACKEND.md](INSTALAR-BACKEND.md)).
 
-## 1. Crear el proyecto en Firebase
-1. Entre a <https://console.firebase.google.com> con la cuenta de Gmail de ADEP (en una ventana de incógnito si tiene otras cuentas abiertas).
-2. **Crear un proyecto** (o «Comenzar con un proyecto de Firebase»).
-3. Nombre del proyecto: **adep-encuesta**.
-   Debajo del nombre aparece el **ID del proyecto**: debe decir exactamente `adep-encuesta`.
-   Si Google le agrega números (por ejemplo `adep-encuesta-1a2b3`), anótelo y avíseme: hay que cambiarlo en `.firebaserc` y en `.github/workflows/publicar.yml`.
-4. Cuando pregunte por Google Analytics, puede **desactivarlo**. Presione **Crear proyecto** y luego **Continuar**.
+## Activar la página (una sola vez)
 
-## 2. Activar Hosting
-1. En el menú izquierdo: **Compilación** (o «Hosting y sin servidores») → **Hosting** → **Comenzar**.
-2. Puede saltar todos los pasos que muestra (Siguiente → Siguiente → Continuar a la consola).
+1. Abra <https://github.com/adepcr/encuesta-adep/settings/pages>.
+2. **Source:** *Deploy from a branch*. **Branch:** `main` y carpeta `/ (root)`. Presione **Save**.
+3. En uno o dos minutos la encuesta queda en la dirección de arriba.
 
-## 3. Crear la llave para GitHub
-1. En Firebase: ⚙️ **Configuración del proyecto** → pestaña **Cuentas de servicio**.
-2. Botón **Generar nueva clave privada** → **Generar clave**. Se descarga un archivo `.json`.
-   ⚠️ Esa llave es secreta: no la suba a GitHub como archivo ni la comparta.
+Desde entonces, cada cambio que se sube a `main` se publica solo (tarda uno o dos minutos).
 
-## 4. Darle permiso para publicar
-1. Active el servicio de Hosting: abra
-   <https://console.cloud.google.com/apis/library/firebasehosting.googleapis.com?project=adep-encuesta>
-   y, si aparece, presione **Habilitar**.
-2. Abra <https://console.cloud.google.com/iam-admin/iam?project=adep-encuesta> (con la cuenta de ADEP).
-3. Busque la cuenta que empieza con **firebase-adminsdk-** y presione el lápiz ✏️ (Editar).
-4. Con **Agregar otro rol**, agregue estos cuatro y presione **Guardar**:
-   - **Administrador de Firebase Hosting**
-   - **Visualizador de claves de API**
-   - **Usuario de cuenta de servicio**
-   - **Consumidor de Service Usage**
-5. Espere unos 5 minutos antes de publicar: Google tarda en activar los permisos.
+## La dirección anterior (adep-encuesta.web.app)
 
-Si la publicación falla con `"statusCode": 403`, casi siempre falta uno de estos pasos.
+Antes la encuesta se publicaba en Firebase Hosting (proyecto `adep-encuesta`, cuenta de Gmail de ADEP).
 
-## 5. Guardar la llave en GitHub
-1. Abra <https://github.com/adepcr/encuesta-adep/settings/secrets/actions>.
-2. **New repository secret**.
-3. Name: `FIREBASE_SERVICE_ACCOUNT`
-4. Secret: abra el archivo `.json` del paso 3 con el Bloc de notas, copie **todo** y péguelo.
-5. **Add secret**. Después puede borrar el archivo `.json` de su computadora.
-
-## 6. Publicar
-1. Abra <https://github.com/adepcr/encuesta-adep/actions> → **Publicar página** → **Run workflow** → **Run workflow**.
-2. En unos 2 minutos la encuesta queda en **https://adep-encuesta.web.app**.
-
-Desde entonces se publica sola con cada cambio en `main`.
-
-## 7. Apagar la dirección de GitHub
-Para que no queden dos direcciones: en GitHub → **Settings → Pages** → **Sitio despublicado** (Unpublish site).
+- Esa dirección **sigue funcionando** con la última versión que se publicó ahí, y las respuestas que lleguen
+  por ella también se guardan en la misma hoja. No recibe cambios nuevos.
+- Reparta la dirección nueva. Cuando ya nadie use la vieja, se puede apagar en la consola de Firebase:
+  **Hosting → … → Desactivar sitio**. Para entrar a Firebase, Google exige verificación en dos pasos
+  en la cuenta desde el 6 de noviembre de 2026.
