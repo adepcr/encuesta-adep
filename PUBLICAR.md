@@ -1,6 +1,9 @@
 # Publicar la encuesta en Firebase (dirección adep-encuesta.web.app)
 
 > ✅ Configurado el 22/10/2026 con la cuenta de Gmail de ADEP. Esta guía queda como referencia.
+>
+> 📦 Desde noviembre de 2026 el repositorio oficial es **https://github.com/adepcr/encuesta-adep** (organización de ADEP).
+> La llave `FIREBASE_SERVICE_ACCOUNT` se generó de nuevo para este repositorio (pasos 3 y 5).
 
 Cada vez que se sube un cambio a `main`, GitHub publica la encuesta en **https://adep-encuesta.web.app**
 (y la página de resultados en **https://adep-encuesta.web.app/resultados**).
@@ -40,14 +43,14 @@ Se configura **una sola vez**, con la **cuenta de Gmail de ADEP** (no con una cu
 Si la publicación falla con `"statusCode": 403`, casi siempre falta uno de estos pasos.
 
 ## 5. Guardar la llave en GitHub
-1. Abra <https://github.com/12027-0289/encuesta-adep/settings/secrets/actions>.
+1. Abra <https://github.com/adepcr/encuesta-adep/settings/secrets/actions>.
 2. **New repository secret**.
 3. Name: `FIREBASE_SERVICE_ACCOUNT`
 4. Secret: abra el archivo `.json` del paso 3 con el Bloc de notas, copie **todo** y péguelo.
 5. **Add secret**. Después puede borrar el archivo `.json` de su computadora.
 
 ## 6. Publicar
-1. Abra <https://github.com/12027-0289/encuesta-adep/actions> → **Publicar página** → **Run workflow** → **Run workflow**.
+1. Abra <https://github.com/adepcr/encuesta-adep/actions> → **Publicar página** → **Run workflow** → **Run workflow**.
 2. En unos 2 minutos la encuesta queda en **https://adep-encuesta.web.app**.
 
 Desde entonces se publica sola con cada cambio en `main`.

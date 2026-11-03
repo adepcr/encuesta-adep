@@ -3,6 +3,10 @@
 Sitio web de la **Encuesta de servicio a la persona asociada** de la Asociación de Educadores Pensionados (ADEP).
 Es un sitio estático (HTML, CSS y JavaScript, sin dependencias) listo para abrir en Visual Studio Code y publicar en GitHub Pages.
 
+- **Encuesta:** https://adep-encuesta.web.app · **Resultados:** https://adep-encuesta.web.app/resultados
+- **Repositorio oficial:** https://github.com/adepcr/encuesta-adep (organización de ADEP)
+- Se publica sola en Firebase con cada cambio en `main` (ver [PUBLICAR.md](PUBLICAR.md)).
+
 ## Características
 
 - Portada llamativa y formulario por secciones (5 pasos) con barra de progreso.
