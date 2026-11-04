@@ -17,22 +17,22 @@ Las respuestas no dependen de la página: siguen llegando a la hoja de Google de
 
 Desde entonces, cada cambio que se sube a `main` se publica solo (tarda uno o dos minutos).
 
-## La dirección anterior (adep-encuesta.web.app)
+## La dirección anterior (adep-encuesta.web.app): desactivada
 
 Antes la encuesta se publicaba en Firebase Hosting (proyecto `adep-encuesta`, cuenta de Gmail de ADEP).
 
-- Esa dirección **sigue funcionando** con la última versión que se publicó ahí, y las respuestas que lleguen
-  por ella también se guardan en la misma hoja. No recibe cambios nuevos.
-- Reparta la dirección nueva. Cuando ya nadie use la vieja, se puede apagar en la consola de Firebase:
-  **Hosting → … → Desactivar sitio**. Para entrar a Firebase, Google exige verificación en dos pasos
-  en la cuenta desde el 6 de noviembre de 2026.
+- El **4 de noviembre de 2026** se desactivó el sitio: `adep-encuesta.web.app` ya no abre la encuesta.
+  La única dirección es la de GitHub Pages (arriba). Las respuestas guardadas en la hoja de Google no se tocaron.
+- El proyecto de Firebase sigue existiendo en la cuenta de Gmail de ADEP, sin sitio publicado y sin costo (plan Spark).
+  Para entrar a Firebase, Google exige verificación en dos pasos en esa cuenta desde el 6 de noviembre de 2026.
+- Se desactivó desde una terminal con:
+  ```
+  npx firebase-tools login
+  npx firebase-tools hosting:disable --project adep-encuesta
+  ```
+  (La consola web nueva no muestra un botón para desactivar.) Para volver a encenderlo habría que publicar
+  de nuevo con `firebase deploy`, pero no hace falta: la encuesta vive en GitHub Pages.
 
 ### Antes de entregar
 
-- [ ] **Sitio viejo en Firebase (`adep-encuesta`): desactivado o entregado.** Una de las dos:
-  - **Desactivado:** en <https://console.firebase.google.com/project/adep-encuesta/hosting/sites>,
-    en el sitio `adep-encuesta` → **⋮ → Desactivar sitio**. La dirección `adep-encuesta.web.app` deja de abrir;
-    las respuestas ya guardadas en la hoja de Google no se tocan.
-  - **Entregado:** en **⚙ Configuración del proyecto → Usuarios y permisos → Agregar miembro**, dar el rol
-    **Propietario** a la persona que recibe (o confirmar que ella tiene la cuenta de Gmail de ADEP,
-    con la verificación en dos pasos a su nombre). Después, quitar el acceso propio.
+- [x] **Sitio viejo en Firebase (`adep-encuesta`): desactivado** el 4 de noviembre de 2026.

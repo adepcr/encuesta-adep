@@ -103,4 +103,4 @@ desde la encuesta; compártala solo con quien deba verla.
 - Resultados (solo organizadores, con clave): **https://adepcr.github.io/encuesta-adep/resultados.html**
 
 Cada cambio que se sube a `main` se publica solo con GitHub Pages. Vea **[PUBLICAR.md](PUBLICAR.md)**.
-La dirección anterior, `adep-encuesta.web.app` (Firebase), sigue funcionando con la última versión publicada ahí.
+La dirección anterior, `adep-encuesta.web.app` (Firebase), quedó desactivada el 4 de noviembre de 2026.
