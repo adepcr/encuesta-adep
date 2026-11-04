@@ -26,3 +26,13 @@ Antes la encuesta se publicaba en Firebase Hosting (proyecto `adep-encuesta`, cu
 - Reparta la dirección nueva. Cuando ya nadie use la vieja, se puede apagar en la consola de Firebase:
   **Hosting → … → Desactivar sitio**. Para entrar a Firebase, Google exige verificación en dos pasos
   en la cuenta desde el 6 de noviembre de 2026.
+
+### Antes de entregar
+
+- [ ] **Sitio viejo en Firebase (`adep-encuesta`): desactivado o entregado.** Una de las dos:
+  - **Desactivado:** en <https://console.firebase.google.com/project/adep-encuesta/hosting/sites>,
+    en el sitio `adep-encuesta` → **⋮ → Desactivar sitio**. La dirección `adep-encuesta.web.app` deja de abrir;
+    las respuestas ya guardadas en la hoja de Google no se tocan.
+  - **Entregado:** en **⚙ Configuración del proyecto → Usuarios y permisos → Agregar miembro**, dar el rol
+    **Propietario** a la persona que recibe (o confirmar que ella tiene la cuenta de Gmail de ADEP,
+    con la verificación en dos pasos a su nombre). Después, quitar el acceso propio.
