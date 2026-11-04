@@ -36,16 +36,8 @@ Antes la encuesta se publicaba en Firebase Hosting (proyecto `adep-encuesta`, cu
 ### Antes de entregar
 
 - [x] **Sitio viejo en Firebase (`adep-encuesta`): desactivado** el 4 de noviembre de 2026.
-- [ ] **Envío por Microsoft 365 (si se activó): quién tiene el secreto.** Vea [ENVIAR-CON-MICROSOFT.md](ENVIAR-CON-MICROSOFT.md).
-  - **¿Se activó?** En la hoja **Encuesta de Servicio ADEP → Extensiones → Apps Script → ⚙️ Configuración
-    del proyecto → Propiedades de la secuencia de comandos**. Si no existe `MS_SECRET`, el correo sale por Gmail
-    y no hay nada que entregar: marque esta casilla como *no se activó*.
-  - **Si existe:** el secreto está guardado en dos lugares, y ninguno depende de una persona:
-    la propiedad `MS_SECRET` (la ve quien tenga la cuenta de Gmail de ADEP) y la aplicación **Encuesta ADEP**
-    en Microsoft Entra (ahí ya no se puede volver a ver; solo crear uno nuevo). Anote en la entrega,
-    **sin copiar el secreto**:
-    - quién administra Microsoft 365 en ADEP (puede crear un secreto nuevo);
-    - la **fecha de vencimiento** del secreto (Entra → Encuesta ADEP → Certificados y secretos) y quién lo renueva;
-    - el correo que envía (`MS_REMITENTE`).
-  - Si alguien guardó el valor del secreto aparte (papel, chat, nota), bórrelo: no hace falta tenerlo fuera de
-    Apps Script. Si se compartió por un medio inseguro, pida a TI un secreto nuevo y borre el viejo en Entra.
+- [x] **Envío por Microsoft 365: no se activó** (revisado el 4 de noviembre de 2026). En Apps Script solo están
+  `CLAVE_RESULTADOS`, `CORREOS` y `ULTIMO_RESUMEN`; no hay propiedades `MS_…`. Los correos salen por la cuenta
+  de Gmail de ADEP y no hay ningún secreto de Microsoft que entregar. Si más adelante se activa, vea
+  [ENVIAR-CON-MICROSOFT.md](ENVIAR-CON-MICROSOFT.md) y anote en la entrega quién administra Microsoft 365
+  y cuándo vence el secreto (nunca el valor del secreto).
